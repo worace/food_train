@@ -1,0 +1,31 @@
+img.backwards {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+header {
+  padding: 15px;
+  border: 1px solid black;
+}
+
+header img {
+  float: left;
+}
+
+header .proj-name {
+  float: left;
+  font-size: 50px;
+  text-decoration: none;
+  color: green;
+}
+
+header .profile-btn {
+  float: right;
+  font-size: 50px;
+  text-decoration: none;
+  color: green;
+}

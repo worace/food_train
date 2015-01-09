@@ -1,0 +1,10 @@
+<header>
+  <%= link_to "Food Train", root_path, class: "proj-name" %>
+  <img src="http://pix.iemoji.com/sbemojix2/0806.png" class="backwards" height="50px" />
+  <% if @current_user %>
+    <%= link_to "Profile", "#", class: "profile-btn" %>
+  <% else %>
+    <%= link_to "Log In", "/logged_in", class: "profile-btn" %>
+  <% end %>
+  <div style="clear:both;"></div>
+</header>
