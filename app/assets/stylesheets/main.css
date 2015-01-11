@@ -7,25 +7,6 @@ img.backwards {
   -ms-filter: "FlipH";
 }
 
-header {
-  padding: 15px;
-  border: 1px solid black;
-}
-
-header img {
-  float: left;
-}
-
-header .proj-name {
-  float: left;
-  font-size: 50px;
-  text-decoration: none;
-  color: green;
-}
-
-header .profile-btn {
-  float: right;
-  font-size: 50px;
-  text-decoration: none;
-  color: green;
+.header-container {
+  margin: 20px 40px;
 }
