@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get '/logged_in', to: 'pages#logged_in'
-  get '/groups', to: 'groups#index'
-  get '/groups/:id', to: 'groups#show'
+  resources :groups, only: [:show, :index]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
