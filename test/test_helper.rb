@@ -12,7 +12,7 @@ class ActiveSupport::TestCase
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
   # -- they do not yet inherit this setting
-  fixtures :all
+  # fixtures :all
 
   def create_user(options = {})
     default_options = { full_name: "Jorghay" }
