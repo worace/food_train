@@ -6,6 +6,7 @@ class PagesController < ApplicationController
     @current_user = true
   end
 
-  def groups_index
+  def my_profile
+    @current_user = true
   end
 end

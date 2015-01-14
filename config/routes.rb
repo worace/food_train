@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get '/logged_in', to: 'pages#logged_in'
+  get '/my_profile', to: 'pages#my_profile'
   resources :groups, only: [:show, :index]
 
   # Example of regular route:
