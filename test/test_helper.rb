@@ -14,5 +14,15 @@ class ActiveSupport::TestCase
   # -- they do not yet inherit this setting
   fixtures :all
 
+  def create_user(options = {})
+    default_options = { full_name: "Jorghay" }
+    User.create!(default_options.merge(options))
+  end
+
+  def create_group(options = {})
+    default_options = { name: "Turing 1408" }
+    Group.create!(default_options.merge(options))
+  end
+
   # Add more helper methods to be used by all tests here...
 end
