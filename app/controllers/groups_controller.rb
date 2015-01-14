@@ -1,8 +1,9 @@
 class GroupsController < ApplicationController
   def index
+    @groups = Group.all
   end
 
   def show
-    @group = Struct.new(:name).new("Turing 1409")
+    @group = Group.includes(:owner, :users).find_by(id: params[:id])
   end
 end
