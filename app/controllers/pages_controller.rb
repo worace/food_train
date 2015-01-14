@@ -3,10 +3,8 @@ class PagesController < ApplicationController
   end
 
   def logged_in
-    @current_user = true
   end
 
   def my_profile
-    @current_user = true
   end
 end

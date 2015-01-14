@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   get '/my_profile', to: 'pages#my_profile'
   resources :groups, only: [:show, :index]
 
+  resources :sessions, only: [:create]
+  delete '/sessions', to: 'sessions#destroy'
+  get '/auth/:provider/callback', to: 'sessions#create'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -14,20 +14,11 @@
         </li>
         <li><a href="<%= root_path %>"><span class="glyphicon glyphicon-home"></span> Home</a></li>
         <li><%= link_to "All Groups", groups_path %></li>
-        <% if @current_user %>
+        <% if current_user %>
           <li><a href="<%= my_profile_path %>"><span class="glyphicon glyphicon-user"></span> Edit Profile</a></li>
-          <!-- <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Profile <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="<%= my_profile_path %>"><span class="glyphicon glyphicon-user"></span> Edit</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li> -->
+          <li><a data-method="delete" href="<%= sessions_path %>"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
         <% else %>
-          <li><%= link_to "Log in", logged_in_path %></li>
+          <li><%= link_to "Log in with yo twits", "/auth/twitter" %></li>
         <% end %>
       </ul>
     </div>
