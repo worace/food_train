@@ -10,10 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap
  *= require_tree .
  *= require_self
- *= require bootstrap
  */
 
- @import url(http://fonts.googleapis.com/css?family=Allan:bold)
- @import url(http://fonts.googleapis.com/css?family=Cardo)
+ @import url("http://fonts.googleapis.com/css?family=Ubuntu:bold");
+ @import url("http://fonts.googleapis.com/css?family=Vollkorn");

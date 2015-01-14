@@ -33,3 +33,16 @@ img.backwards {
 .vote-group-item {
   padding: 0 !important;
 }
+
+
+h1 {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 65px;
+}
+
+body {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  font-size: 16px;
+  line-height: 25px;
+}
