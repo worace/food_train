@@ -10,3 +10,28 @@ img.backwards {
 .header-container {
   margin: 20px 40px;
 }
+
+.vote-item{
+  color: black;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: block;
+}
+.vote-item:visited {
+  color: black;
+  width: 100%;
+  text-decoration: none;
+}
+
+.vote-item:hover {
+  background-color: #eee;
+  text-decoration: none;
+  color: black;
+}
+
+.vote-item:active {
+  background-color: yellow;
+  text-decoration: none;
+  color: black;
+}
