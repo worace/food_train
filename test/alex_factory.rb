@@ -1,11 +1,21 @@
 module AlexFactory
-  def create_user(options = {})
+  def create_user(options = {}, &block)
     default_options = { full_name: "Jorghay" }
-    User.create!(default_options.merge(options))
+    User.create! default_options.merge(options), &(block || proc{})
   end
 
-  def create_group(options = {})
-    default_options = { name: "Turing 1408" }
-    Group.create!(default_options.merge(options))
+  def create_group(options = {}, &block)
+    default_options = { name: "Turing #{rand(2000)}" }
+    Group.create! default_options.merge(options), &(block || proc{})
+  end
+
+  def create_train(options = {}, &block)
+    default_options = {  }
+    Train.create! default_options.merge(options), &(block || proc{})
+  end
+
+  def create_train_option(options = {}, &block)
+    default_options = { place: "Brought Lunch" }
+    TrainOption.create! default_options.merge(options), &(block || proc{})
   end
 end

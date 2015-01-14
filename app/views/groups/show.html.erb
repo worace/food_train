@@ -8,13 +8,13 @@
   <% end %>
 </ul>
 
-<div class="panel panel-default" style="float:right;width:50%;">
-  <div class="panel-heading">Where ya wanna eat?</div>
-  <ul class="list-group" style="">
-    <a href="#" style="text-decoration:none;"><li class="list-group-item vote-item">Vote for this place</li></a>
-    <a href="#" style="text-decoration:none;"><li class="list-group-item vote-item">Vote for this place</li></a>
-    <a href="#" style="text-decoration:none;"><li class="list-group-item vote-item">Vote for this place</li></a>
-    <a href="#" style="text-decoration:none;"><li class="list-group-item vote-item">Vote for this place</li></a>
-    <a href="#" style="text-decoration:none;"><li class="list-group-item vote-item">Vote for this place</li></a>
-  </ul>
-</div>
+<% @group.trains.each do |train| %>
+  <div class="panel panel-default" style="float:right;width:50%;">
+    <div class="panel-heading">Where ya wanna eat bruh?</div>
+    <ul class="list-group">
+      <% train.train_options.each do |option| %>
+        <li class="list-group-item vote-group-item"><a href="#" class="vote-item">Vote for the <%= option.place %> Train</a></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
