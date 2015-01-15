@@ -18,4 +18,9 @@ module AlexFactory
     default_options = { place: "Brought Lunch" }
     TrainOption.create! default_options.merge(options), &(block || proc{})
   end
+
+  def create_vote(options = {}, &block)
+    default_options = {  }
+    Vote.create! default_options.merge(options), &(block || proc{})
+  end
 end

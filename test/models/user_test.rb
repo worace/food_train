@@ -29,4 +29,10 @@ class UserTest < ActiveSupport::TestCase
     assert_equal "TestJorge", user.reload.full_name
   end
 
+  def test_user_can_have_many_votes
+    user = create_user
+    5.times { create_vote user: user }
+    assert_equal 5, user.votes.count
+  end
+
 end
