@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#create'
 
+  post '/train_options/:id/vote', to: 'votes#create'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

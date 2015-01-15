@@ -4,6 +4,6 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @group = Group.includes(:owner, :users).find_by(id: params[:id])
+    @group = Group.includes(:owner, :users, trains: [train_options: [:votes]]).find_by(id: params[:id])
   end
 end
