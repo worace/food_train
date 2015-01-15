@@ -1,6 +1,6 @@
 class VotesController < ApplicationController
+  before_action :require_logged_in
   def create
-    require_logged_in
     train_option = TrainOption.find_by(id: params[:id])
     if train_option
       Vote.create(user: current_user, train_option: train_option)

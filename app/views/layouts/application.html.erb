@@ -10,14 +10,18 @@
 
 <%= render partial: "layouts/header" %>
 
-<div class="flash-messages">
-  <% flash.each do |key, value| %>
-    <h3><%= value %></h3>
-  <% end %>
-</div>
-<div class="container">
-  <%= yield %>
-</div>
+
+<% if request.path == root_path %>
+  <div class="image-splash col-md-12">
+    <%= yield %>
+  </div>
+<% else %>
+  <%= render partial: "layouts/flash" %>
+  <div class="container">
+    <%= yield %>
+  </div>
+<% end %>
+
 
 </body>
 </html>

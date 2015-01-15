@@ -1,13 +1,9 @@
-<!-- <ul class="list-group" style="float:left;width:30%;">
-  <li class="list-group-item active">Current Trains</li>
-  <li class="list-group-item">Pizza Train</li>
-  <li class="list-group-item">Yolo Train</li>
-</ul>
-
-<div style="float:right;margin-right:100px;">
-  <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Sign up and make a group!</a><br>
-  <a href="#" class="btn btn-default">Sign up and join a group!</a>
+<% if flash.any? %>
+  <div class="splash-window splash-window-flash">
+    <%= render partial: "layouts/flash" %>
+  </div>
+<% end %>
+<div class="splash-window splash-window-main">
+  <h1>Food Train: The happiest place on Earth</h1>
+  <li><%= link_to "Sign in with twits", "/auth/twitter", class: "btn btn-lg btn-default" %></li>
 </div>
-<div style="clear:both;"></div> -->
-
-<div class="home-container" style="margin:auto;"></div>

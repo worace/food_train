@@ -11,5 +11,6 @@ class LogInFeatureTest < Capybara::Rails::TestCase
     log_in
     refute_link page, "log-in"
     click_link_or_button "Log Out"
+    assert_link page, "log-in"
   end
 end

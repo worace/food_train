@@ -22,4 +22,10 @@ class TrainOptionTest < ActiveSupport::TestCase
     assert_equal 2, pizza_option.votes.count
   end
 
+  def test_train_option_vote_count
+    option = create_train_option
+    5.times { create_vote(train_option: option) }
+    assert_equal 5, option.vote_count
+  end
+
 end
