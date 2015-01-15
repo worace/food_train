@@ -53,3 +53,11 @@ body {
   top: 100px;
   z-index: 1;
 }
+
+/*body {
+  background: url("/assets/train-tracks.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :groups, only: [:show, :index]
 
   resources :sessions, only: [:create]
-  delete '/sessions', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#create'
 
   # Example of regular route:
