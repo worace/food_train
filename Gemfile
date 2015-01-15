@@ -35,3 +35,5 @@ gem 'minitest-rails', group: :development
 gem "minitest-rails-capybara", group: :development
 gem 'unicorn'
 gem 'bcrypt', '~> 3.1.7'
+gem 'execjs'
+gem 'therubyracer'
