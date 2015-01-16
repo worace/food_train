@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root 'pages#home'
-  get '/logged_in', to: 'pages#logged_in'
+  get '/dashboard', to: 'pages#dashboard'
   get '/my_profile', to: 'pages#my_profile'
   resources :groups, only: [:show, :index]
 

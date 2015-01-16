@@ -10,6 +10,9 @@ img.backwards {
 .header-container {
   margin: 20px 40px;
 }
+.nav-color-change {
+  background-color: rgba(255,255,255,0.9);
+}
 
 .vote-item {
   text-decoration: none !important; /* DEAL WITH IT */
@@ -67,7 +70,7 @@ body {
 }
 
 .splash-window {
-  background: rgba(255,255,255,0.5);
+  background: rgba(200, 200, 200, 0.8);
   text-align: center;
   border-radius: 30px;
 }
@@ -85,4 +88,12 @@ body {
   /*margin: 300px 400px;*/
   margin: 300px auto;
   width: 40%
+}
+
+body {
+  background: url("/assets/train-tracks.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

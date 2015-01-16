@@ -8,20 +8,15 @@
 </head>
 <body>
 
-<%= render partial: "layouts/header" %>
-
 
 <% if request.path == root_path %>
   <div class="image-splash col-md-12">
-    <%= yield %>
-  </div>
 <% else %>
+  <%= render partial: "layouts/header" %>
   <%= render partial: "layouts/flash" %>
-  <div class="container">
-    <%= yield %>
-  </div>
+  <div class="container bg-site">
 <% end %>
-
+<%= yield %></div>
 
 </body>
 </html>

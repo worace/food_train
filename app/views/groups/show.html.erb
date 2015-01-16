@@ -20,15 +20,15 @@
   </div>
 
 
-  <% @group.trains.each do |train| %>
+<% @group.trains.each do |train| %>
   <div class="col-md-6 col-md-offset-1">
     <center><h3>Where ya wanna eat bruh?</h3></center>
     <div class="panel panel-default">
       <ul class="list-group">
         <% train.sorted_train_options.each_with_index do |option, index| %>
           <li class="list-group-item vote-group-item">
-            <%= link_to "/train_options/#{option.id}/vote", class: "vote-item", method: :post do %>
-              Vote for the <%= option.place %> Train (votes: <%= option.vote_count %>)
+            <%= link_to "/train_options/#{option.id}/vote", class: "vote-item", method: :post, id: "vote-#{option.place.downcase}" do %>
+              Vote for the <%= option.place %> Train <span class="badge"><%= option.vote_count %> votes</span>
             <% end %>
           </li>
         <% end %>
