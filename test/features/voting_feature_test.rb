@@ -22,8 +22,21 @@ class VotingFeatureTest < Capybara::Rails::TestCase
     log_in
     visit group_path(group)
     click_link_or_button "Vote for the Pizza Train"
-    # require 'pry' ; binding.pry
 
     assert_equal 1, pizza_option.reload.vote_count
+  end
+
+  def test_voting_for_an_option_that_doesnt_exist_gives_error
+    group = create_group
+    train = create_train group: group
+    pizza_option = create_train_option train: train, place: "Pizza"
+    deleted_option = create_train_option train: train, place: "Deleted"
+
+    log_in
+    visit group_path(group)
+    deleted_option.delete
+    click_link_or_button "Vote for the Deleted Train"
+
+    assert_content page, "option does not exist"
   end
 end
