@@ -4,11 +4,26 @@ class VotingFeatureTest < Capybara::Rails::TestCase
   def test_can_not_vote_if_not_logged_in
     group = create_group
     train = create_train group: group
-    pizza_option = create_train_option train: train, place: "pizza"
+    pizza_option = create_train_option train: train, place: "Pizza"
 
     visit group_path(group)
-    click_link_or_button "vote-pizza"
+    click_link_or_button "Vote for the Pizza Train"
+    assert_equal group_path(group), current_path
 
-    assert_equal 0, pizza_option.vote_count
+    assert_equal 0, pizza_option.reload.vote_count
+    assert_content page, "must be logged in"
+  end
+
+  def test_can_increase_the_votes_when_logged_in
+    group = create_group
+    train = create_train group: group
+    pizza_option = create_train_option train: train, place: "Pizza"
+
+    log_in
+    visit group_path(group)
+    click_link_or_button "Vote for the Pizza Train"
+    # require 'pry' ; binding.pry
+
+    assert_equal 1, pizza_option.reload.vote_count
   end
 end
