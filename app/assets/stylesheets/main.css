@@ -19,6 +19,11 @@ img.backwards {
   color: black !important; /* DEAL WITH IT */
   display: block;
   padding: 10px 15px;
+  margin: inherit;
+  background: inherit;
+  border: inherit;
+  width: 100%;
+  text-align: left;
 }
 
 .vote-item:hover {
@@ -27,10 +32,6 @@ img.backwards {
 
 .vote-item:active {
   background-color: yellow;
-}
-
-.vote-item-a a{
-  text-decoration: none;
 }
 
 .vote-group-item {

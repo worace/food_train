@@ -27,7 +27,7 @@
       <ul class="list-group">
         <% train.sorted_train_options.each_with_index do |option, index| %>
           <li class="list-group-item vote-group-item">
-            <%= link_to "/train_options/#{option.id}/vote", class: "vote-item", method: :post do %>
+            <%= button_to "/train_options/#{option.id}/vote", class: "vote-item", method: :post do %>
               Vote for the <%= option.place %> Train <span class="badge"><%= option.vote_count %> votes</span>
             <% end %>
           </li>
