@@ -3,5 +3,5 @@
   <% @groups.each do |group| %>
     <li class="list-group-item"><%= link_to group.name, group_path(group), class: "btn" %></li>
   <% end %>
-  <li style="list-style:none;"><%= link_to "Create a new group", "#", class: "btn btn-default", style: "margin:10px 0px;" %></li>
+  <li style="list-style:none;"><%= link_to "Create a new group", new_group_path, class: "btn btn-default", style: "margin:10px 0px;" %></li>
 </ul>

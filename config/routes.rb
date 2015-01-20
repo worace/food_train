@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
   get '/my_profile', to: 'pages#my_profile'
-  resources :groups, only: [:show, :index]
+
+  resources :groups, only: [:show, :index, :new, :create]
+  post '/groups/:id/join', to: 'groups#join'
+  post '/groups/:id/leave', to: 'groups#leave'
 
   resources :sessions, only: [:create]
   get '/logout', to: 'sessions#destroy'

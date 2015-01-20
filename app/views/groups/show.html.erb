@@ -17,6 +17,13 @@
         <li class="list-group-item"><%= user.full_name %></li>
       <% end %>
     </ul>
+    <% if current_user %>
+      <% if @group.has_user? current_user %>
+        <%= button_to "Leave this group", "/groups/#{@group.id}/leave", class: "btn btn-default", method: :post %>
+      <% else %>
+        <%= button_to "Join this group", "/groups/#{@group.id}/join", class: "btn btn-default", method: :post %>
+      <% end %>
+    <% end %>
   </div>
 
 
@@ -35,8 +42,8 @@
       </ul>
     </div>
   </div>
-
-  <% end %>
+<% end %>
+<%= button_to "Start a train", new_train_path, class: "btn btn-info" %>
   </div>
 
 
