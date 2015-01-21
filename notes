@@ -1,32 +1,15 @@
-User stories:
-
-
-Backlog:
-As a guest, I can view trains that have not left yet
-As a user, I can leave or join groups
-As a user, I can create new groups
-As a group member, I can vote on the current train
-As a group member, I am notified when the train is about to leave
-As a group owner, I can ban people from joining
-As a group owner, I can invite people to join
-As a group _____, I can start a train
-
 later: Faye to sub/pub to frontend
-Time and place where you're going on the group show page (if there is a train leaving)
-Yelp Api
-
-next check in:
 
 # Add ability to create groups
 # People can join groups
-Would only allow to vote if your are registered
+# Would only allow you to vote if your are registered MOSTLY
 Only vote once
 Make new trains
 Have departure time
+Pull data from service to display the restaurant info (optional)
 Invite people to join your group via email / text message (optional)
 ON VPS RUNNING
 ON VPS RUNNING
 ON VPS RUNNING
 ON VPS RUNNING
-ON VPS RUNNING
-ON VPS RUNNING
+
