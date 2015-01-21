@@ -10,7 +10,7 @@ module AlexFactory
   end
 
   def create_train(options = {}, &block)
-    default_options = {  }
+    default_options = { departure_time: Time.now }
     Train.create! default_options.merge(options), &(block || proc{})
   end
 

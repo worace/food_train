@@ -9,6 +9,7 @@
           <h4>Option <%= ff.options[:child_index] + 1 %></h4>
           <%= ff.text_field :place %>
         <% end %>
+        <input type="time" name="train[departure_time]" value="">
         <%= f.submit "Start the train", class: "btn btn-default" %>
       <% end %>
     </div>

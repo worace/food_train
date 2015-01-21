@@ -12,6 +12,6 @@ class TrainsController < ApplicationController
 
   private
   def train_params
-    params.require(:train).permit(train_options_attributes: [:place] )
+    params.require(:train).permit(:departure_time, train_options_attributes: [:place])
   end
 end

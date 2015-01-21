@@ -49,6 +49,11 @@ body {
   font-family: 'Vollkorn', Georgia, Times, serif;
   font-size: 16px;
   line-height: 25px;
+  background: url("/assets/train-tracks.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .flash-messages {
@@ -89,12 +94,4 @@ body {
   /*margin: 300px 400px;*/
   margin: 300px auto;
   width: 40%
-}
-
-body {
-  background: url("/assets/train-tracks.jpg") no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }

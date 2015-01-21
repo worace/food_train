@@ -31,4 +31,16 @@ class TrainTest < ActiveSupport::TestCase
     assert_equal train.sorted_train_options, sorted
   end
 
+  def test_pretty_time
+    train = create_train departure_time: "7:56 PM"
+    assert_match /7:56 pm/i, train.pretty_time
+  end
+
+  def test_validates_time_exists
+    train = create_train
+    assert train.valid?
+    train.departure_time = nil
+    refute train.valid?
+  end
+
 end

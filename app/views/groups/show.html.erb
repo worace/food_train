@@ -30,6 +30,9 @@
 <% @group.trains.each do |train| %>
   <div class="col-md-6 col-md-offset-1">
     <center><h3>Where ya wanna eat bruh?</h3></center>
+    <% if train.departure_time %>
+      <center><h3>This train leaves at <%= train.pretty_time %></h3></center>
+    <% end %>
     <div class="panel panel-default">
       <ul class="list-group">
         <% train.sorted_train_options.each_with_index do |option, index| %>
