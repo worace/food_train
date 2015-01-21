@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
 
-  get '/my_profile', to: 'pages#my_profile' # DELETE ME
-
   resources :groups, only: [:show, :index, :new, :create] do
     resources :trains, only: [:create, :new]
   end

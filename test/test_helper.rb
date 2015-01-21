@@ -26,9 +26,9 @@ class ActiveSupport::TestCase
 
   def auth_hash
     {
-      provider: "twitter",
-      uid: "testuid",
-      info: { name: "Trevor" }
+      "provider" => "twitter",
+      "uid" => "testuid",
+      "info" => { "name" => "Trevor" }
     }
   end
 end

@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
     user = User.where(uid: auth_data['uid']).first_or_create
     user.tap { |u| u.update_attributes full_name: auth_data["info"]["name"] }
   end
+
+  def all_groups
+    groups + owned_groups
+  end
 end

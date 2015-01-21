@@ -11,7 +11,6 @@ class VotingFeatureTest < Capybara::Rails::TestCase
     assert_equal group_path(group), current_path
 
     assert_equal 0, pizza_option.reload.vote_count
-    assert_content page, "must be logged in"
   end
 
   def test_can_increase_the_votes_when_logged_in
@@ -20,6 +19,9 @@ class VotingFeatureTest < Capybara::Rails::TestCase
     pizza_option = create_train_option train: train, place: "Pizza"
 
     log_in
+    user = User.find_or_create_from_auth_hash(auth_hash)
+    group.users << user
+
     visit group_path(group)
     click_link_or_button "Vote for the Pizza Train"
 
@@ -33,6 +35,9 @@ class VotingFeatureTest < Capybara::Rails::TestCase
     deleted_option = create_train_option train: train, place: "Deleted"
 
     log_in
+    user = User.find_or_create_from_auth_hash(auth_hash)
+    group.users << user
+
     visit group_path(group)
     deleted_option.delete
     click_link_or_button "Vote for the Deleted Train"

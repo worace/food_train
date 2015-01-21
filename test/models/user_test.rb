@@ -35,4 +35,16 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 5, user.votes.count
   end
 
+  def test_all_groups
+    user = create_user
+    group1 = create_group owner: user
+    group2 = create_group
+    group3 = create_group
+    group2.users << user
+    group3.users << user
+    assert_includes user.all_groups, group1
+    assert_includes user.all_groups, group2
+    assert_includes user.all_groups, group3
+  end
+
 end

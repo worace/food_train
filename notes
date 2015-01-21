@@ -3,11 +3,11 @@ later: Faye to sub/pub to frontend
 # Add ability to create groups
 # People can join groups
 # Make new trains
-Have departure time
-Only vote once
-Pull data from service to display the restaurant info (optional)
+# Have departure time
+# Only vote once
+# Pull data from service to display the restaurant info (optional)
+# Would only allow you to vote if your are registered
 Invite people to join your group via email / text message (optional)
-Would only allow you to vote if your are registered MOSTLY
 ON VPS RUNNING
 ON VPS RUNNING
 ON VPS RUNNING

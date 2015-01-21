@@ -39,6 +39,14 @@
           <li class="list-group-item vote-group-item">
             <%= button_to "/train_options/#{option.id}/vote", class: "vote-item", method: :post do %>
               Vote for the <%= option.place %> Train <span class="badge"><%= option.vote_count %> votes</span>
+              Rating:    <%= #option.yelp_business.rating
+                          %>
+              Phone:     <%= #option.yelp_business.display_phone
+                          %>
+              Address:   <%= #option.yelp_business.location.address
+                          %>
+              Category:  <%= #option.yelp_business.categories.first.first
+                          %>
             <% end %>
           </li>
         <% end %>
