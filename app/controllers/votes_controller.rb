@@ -4,6 +4,7 @@ class VotesController < ApplicationController
   def create
     train_option = TrainOption.find_by(id: params[:id])
     if train_option
+      Vote.where(user: current_user, train_option: train_option.train.train_option_ids).delete_all
       Vote.create(user: current_user, train_option: train_option)
       flash[:notice] = "Vote Placed"
     else
