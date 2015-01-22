@@ -49,7 +49,8 @@ body {
   font-family: 'Vollkorn', Georgia, Times, serif;
   font-size: 16px;
   line-height: 25px;
-  background: url("/assets/train-tracks.jpg") no-repeat center;
+  background: url("/assets/train-tracks.jpg") no-repeat bottom center fixed;
+  background: url(<%= asset_path "train-tracks.jpg" %>) no-repeat bottom center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -57,22 +58,11 @@ body {
 }
 
 .flash-messages {
-  /*margin-top: 100px;*/
-  width: 100%;
-  text-align: center;
-  color: black;
-  z-index: 1;
-}
-
-.image-splash {
-  z-index: -1;
-  margin-top: -93px;
-  background: url("/assets/train-tracks.jpg") no-repeat center center fixed;
-  height: 1024px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  color: #5cb85c;
+  position: fixed;
+  top: 15px;
+  left: 46%;
+  text-transform: uppercase;
 }
 
 .splash-window {
@@ -94,4 +84,8 @@ body {
   /*margin: 300px 400px;*/
   margin: 300px auto;
   width: 40%
+}
+
+.ubuntu {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
 }
