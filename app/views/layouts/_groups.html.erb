@@ -2,7 +2,7 @@
   <ul class="list-group">
 
     <% @groups.each do |group| %>
-        <li class="list-group-item"><%= link_to group.name, group_path(group), class: "btn btn-lg ubuntu" %></li>
+        <li class="list-group-item"><%= link_to group.name.html_safe, group_path(group), class: "btn btn-lg ubuntu" %></li>
     <% end %>
     <%= link_to "Create a new group", new_group_path, class: "btn btn-success btn-lg", style: "margin:10px 0px;" %>
 
