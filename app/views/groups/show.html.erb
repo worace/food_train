@@ -17,8 +17,10 @@
         <li class="list-group-item"><%= user.full_name %></li>
       <% end %>
     </ul>
-    <% if current_user && @group.owner != current_user %>
-      <% if @group.users.include? current_user %>
+    <% if current_user %>
+      <% if @group.owner == current_user %>
+        <%= button_to "Disband this group", group_path(@group), class: "btn btn-default", method: :delete %>
+      <% elsif @group.users.include? current_user %>
         <%= button_to "Leave this group", "/groups/#{@group.id}/leave", class: "btn btn-default", method: :post %>
       <% else %>
         <%= button_to "Join this group", "/groups/#{@group.id}/join", class: "btn btn-default", method: :post %>
@@ -54,8 +56,11 @@
     </div>
   </div>
 <% end %>
-<center><%= link_to "Start a train", new_group_train_path(@group), class: "btn btn-info" %></center>
-  </div>
+
+<% if @group.trains.none? %>
+  <center><%= link_to "Start a train", new_group_train_path(@group), class: "btn btn-info" %></center>
+<% end %>
+</div>
 
 
 </div>
