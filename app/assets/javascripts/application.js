@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+$(function() {
+  $('.vote-item-tooltip').tooltip();
+});
