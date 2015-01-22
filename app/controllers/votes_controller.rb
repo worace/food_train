@@ -15,7 +15,7 @@ class VotesController < ApplicationController
   def require_in_group
     option = TrainOption.find_by(id: params[:id])
     return unless option
-    unless option.train.group.users.exists? current_user
+    unless option.train.group.has_user? current_user
       redirect_to :back, notice: "you're not in this group"
     end
   end
