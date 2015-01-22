@@ -1,0 +1,12 @@
+<center>
+  <ul class="list-group">
+
+    <li class="list-group-item"><h2 class="ubuntu">Groups</h2></li>
+
+    <% @groups.each do |group| %>
+      <li class="list-group-item"><%= link_to group.name, group_path(group), class: "btn btn-lg ubuntu" %></li>
+    <% end %>
+    <%= link_to "Create a new group", new_group_path, class: "btn btn-success btn-lg", style: "margin:10px 0px;" %>
+
+  </ul>
+</center>

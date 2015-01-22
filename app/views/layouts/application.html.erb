@@ -10,13 +10,15 @@
 
 
 <% if request.path == root_path %>
-  <div class="image-splash col-md-12">
+  <%= yield %>
 <% else %>
   <%= render partial: "layouts/header" %>
   <%= render partial: "layouts/flash" %>
-  <div class="container bg-site">
+  <div class="container">
+    <%= yield %>
+  </div>
 <% end %>
-<%= yield %></div>
+
 
 </body>
 </html>

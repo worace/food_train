@@ -11,14 +11,14 @@
   <div class="panel-body">
 
   <div class="col-md-4 col-md-offset-1">
-    <center><h3>Members</h3></center>
     <ul class="list-group">
+      <li class="list-group-item"><h2 class="ubuntu">Members</h2></li>
       <% @group.users.each do |user| %>
         <li class="list-group-item"><%= user.full_name %></li>
       <% end %>
     </ul>
-    <% if current_user %>
-      <% if @group.has_user? current_user %>
+    <% if current_user && @group.owner != current_user %>
+      <% if @group.users.include? current_user %>
         <%= button_to "Leave this group", "/groups/#{@group.id}/leave", class: "btn btn-default", method: :post %>
       <% else %>
         <%= button_to "Join this group", "/groups/#{@group.id}/join", class: "btn btn-default", method: :post %>
